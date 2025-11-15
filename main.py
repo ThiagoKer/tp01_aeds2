@@ -186,9 +186,8 @@ with open(NOME_ARQUIVO_SAIDA, "wb") as arquivo:
 
 print(f"\n{len(blocos)} blocos gravados no arquivo '{NOME_ARQUIVO_SAIDA}'.")
 
-# ======================================
+
 # 4. Cálculo e exibição de estatísticas
-# ======================================
 
 print("\n=== RELATÓRIO DE ARMAZENAMENTO ===")
 
@@ -216,9 +215,10 @@ for i, bloco in enumerate(blocos, start=1):
     ocupacao = (len(bloco) / tam_max_bloco) * 100
     print(f"Bloco {i}: {len(bloco)} bytes ({ocupacao:.1f}% cheio)")
 
-# Resumo estatístico
+# Resumo 
 print(f"\nTotal de blocos: {total_blocos}")
 print(f"Blocos parcialmente utilizados: {blocos_parciais}")
 print(f"Percentual médio de ocupação: {percentual_medio:.1f}%")
 print(f"Eficiência de armazenamento: {eficiencia_real:.1f}%")
+
 print("=====================================")
